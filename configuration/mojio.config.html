@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mojio config</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  </head>
+  <body>
+	<img src="http://sandbox.developer.moj.io/content/themes/mojio/img/mojio_logo_sm.png">
+    <h1>mojio config</h1>
+	<fieldset>
+		<label for="name">Username:</label>
+		<input type="text" id="username">	
+		<br/>
+		<label for="name">Password:</label>
+		<input type="password" id="password">
+		<br/>
+		<button type="submit" id="cancel">Cancel</button>
+		<button type="submit" id="save">Save</button>
+	</fieldset>	
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script>
+		$("#cancel").click(function() {
+			console.log('cancel');
+			document.location = "pebblejs://close";
+		});
+		$("#save").click(function() {
+			console.log('save');
+			var username = $("#username").val();
+			var password = $("#password").val();
+			var options = {"username" : username, "password" : password };
+			var json = JSON.stringify(options);
+			var location = "pebblejs://close#" + encodeURIComponent(json);
+			document.location = location;
+		});
+		
+		$().ready(function() {
+			var obj = jQuery.parseJSON(decodeURIComponent(window.location.search.substring(1)));
+			for(key in obj) {
+			  $("#"+[key]).val(obj[key]);
+			  $("#"+[key]).val(obj[key]).slider("refresh");       
+			}
+		});		
+	</script>
+  </body>
+</html>
