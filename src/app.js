@@ -83,10 +83,8 @@ function selectVehicle(e) {
           lst.push({title:"license plate", subtitle:vehicle.LicensePlate});
           lst.push({title:"ignition", subtitle:vehicle.IgnitionOn?"running":"parked"});
           lst.push({title:"last seen", subtitle:new Date(vehicle.LastLocationTime)});
-          lst.push({title:"speed", subtitle:vehicle.LastSpeed.toString()});
           lst.push({title:"fuel level", subtitle:vehicle.FuelLevel.toString() + "%"});
           if(vehicle.LastOdometer) lst.push({title:"odometer", subtitle:vehicle.LastOdometer.toString()});
-          if(vehicle.LastRpm) lst.push({title:"rpm", subtitle:vehicle.LastRpm.toString()});
           if(vehicle.LastFuelEfficiency) lst.push({title:"fuel efficiency", subtitle:Math.round(vehicle.LastFuelEfficiency,2)});
           var detailsMenu = new UI.Menu({
               sections: [{
