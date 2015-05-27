@@ -1,3 +1,9 @@
+/**
+ * Welcome to the Pebble client for Moj.io
+ *
+ * This s a basic reverse geocoder for googles service
+ */
+
 var ajax = require('ajax');
 
 var geoCodeConfig = {

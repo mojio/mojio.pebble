@@ -1,3 +1,9 @@
+/**
+ * Welcome to the Pebble client for Moj.io
+ *
+ * This is a basic mojio client, using username/password and not oAuth
+ */
+
 var ajax = require('ajax');
 
 var config = {

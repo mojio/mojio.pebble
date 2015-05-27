@@ -1,7 +1,7 @@
 /**
- * Welcome to Pebble.js!
+ * Welcome to the Pebble client for Moj.io
  *
- * This is where you write your app.
+ * This is the main entry point for the application
  */
 
 var UI = require('ui');
@@ -42,7 +42,7 @@ function login() {
   var options = config.getConfig();
   
   if(!options || typeof options == 'undefined' || typeof options.username == 'undefined' ||typeof options.password == 'undefined'  ) {
-    card.subtitle('app not configured!');
+    card.subtitle('you will need to use your phone to configure this app first!');
   } else {    
     m.login( options.username, options.password, function() {
       card.subtitle('connected to your moj.io account');

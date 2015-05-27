@@ -1,3 +1,8 @@
+/**
+ * Welcome to the Pebble client for Moj.io
+ *
+ * This is the main entry point for configuring the application
+ */
 
 var configurationUrl = 'http://nothingmn.github.io/mojio.config.html';
 
