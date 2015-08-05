@@ -5,7 +5,7 @@
         "configurable"
     ],
     "companyName": "rob.chartier@gmail.com",
-    "longName": "moj.io",
+    "longName": "Mojio spot",
     "projectType": "pebblejs",
     "resources": {
         "media": [
@@ -30,19 +30,20 @@
                 "type": "font"
             },
             {
-                "file": "images/menu.image.png",
+                "file": "images/mojio.spot.logo.png",
                 "menuIcon": true,
-                "name": "IMAGES_MENU_IMAGE_PNG",
+                "name": "IMAGES_MOJIO_SPOT_LOGO_PNG",
                 "type": "png"
             }
         ]
     },
     "sdkVersion": "3",
-    "shortName": "moj.io",
+    "shortName": "Mojio spot",
     "uuid": "38fba6c4-be92-4a5e-9470-872b12aa5606",
     "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "watchapp": {
+        "hiddenApp": false,
         "watchface": false
     }
 }
